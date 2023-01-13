@@ -6,3 +6,4 @@ router.get("/",(req,res)=>{
     res.json({"msg":"hello world!"})
 })
 app.use('./netlify/functions/api',router)
+module.exports.handler = serverless(app)
